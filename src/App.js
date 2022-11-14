@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoComponent from "./components/todo";
+import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
+import Login from "./components/Login";
+import { NeedLogin } from "./components/protectedRoute";
+import { ToastContainer } from "react-toastify";
+
+function Credentials(params) {}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route
+          path="/todo"
+          element={<NeedLogin>{<TodoComponent />}</NeedLogin>}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

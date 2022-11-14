@@ -20,6 +20,7 @@ function validateEmail(a) {
     method: "POST",
     headers: {
       Accept: "application/json",
+      "Access-Control-Allow-Headers": "*",
     },
     data: {
       email: a,

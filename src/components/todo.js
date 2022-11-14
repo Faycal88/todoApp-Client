@@ -58,7 +58,7 @@ function FormTodo({ addTodo }) {
 function dispatchAction(newTodos) {
   const token = localStorage.getItem("todo");
   const options = {
-    url: "http://localhost:4000/todo/add",
+    url: "https://todo-app-fv6xa.ondigitalocean.app/todo/add",
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -82,7 +82,7 @@ function TodoComponent() {
   useEffect(() => {
     const token = localStorage.getItem("todo");
     const options = {
-      url: "http://localhost:4000/todo/get",
+      url: "https://todo-app-fv6xa.ondigitalocean.app/todo/get",
       method: "GET",
       headers: {
         Accept: "application/json",

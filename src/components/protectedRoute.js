@@ -13,7 +13,7 @@ export const NeedLogin = ({ children }) => {
   } else {
     const token = localStorage.getItem("todo");
     const options = {
-      url: "http://localhost:4000/getToken",
+      url: "https://todo-app-fv6xa.ondigitalocean.app/getToken",
       method: "GET",
       headers: {
         Accept: "application/json",

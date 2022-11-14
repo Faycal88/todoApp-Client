@@ -16,7 +16,7 @@ function validateEmail(a) {
   }
   emailFeild.style.border = "none";
   const options = {
-    url: "http://localhost:4000/login",
+    url: "https://todo-app-fv6xa.ondigitalocean.app/login",
     method: "POST",
     headers: {
       Accept: "application/json",

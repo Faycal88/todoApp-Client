@@ -62,7 +62,6 @@ function dispatchAction(newTodos) {
     method: "POST",
     headers: {
       Accept: "application/json",
-      "Content-Type": "application/json;charset=UTF-8",
       Authorization: token,
     },
     data: {
@@ -86,7 +85,6 @@ function TodoComponent() {
       method: "GET",
       headers: {
         Accept: "application/json",
-        "Content-Type": "application/json;charset=UTF-8",
         Authorization: token,
       },
     };

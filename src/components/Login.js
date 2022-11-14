@@ -20,7 +20,6 @@ function validateEmail(a) {
     method: "POST",
     headers: {
       Accept: "application/json",
-      "Content-Type": "application/json;charset=UTF-8",
     },
     data: {
       email: a,

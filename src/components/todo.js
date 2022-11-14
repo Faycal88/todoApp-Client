@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Todo({ todo, index, markTodo, removeTodo }) {
   return (
@@ -77,6 +78,7 @@ function dispatchAction(newTodos) {
 function TodoComponent() {
   const [todos, setTodos] = React.useState([]);
   const [done, setDone] = React.useState([{}]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("todo");
@@ -119,7 +121,7 @@ function TodoComponent() {
   const logOut = () => {
     localStorage.removeItem("todo");
     localStorage.removeItem("list");
-    window.location.reload();
+    navigate("/");
   };
 
   return (

@@ -19,6 +19,7 @@ function App() {
           path="/todo"
           element={<NeedLogin>{<TodoComponent />}</NeedLogin>}
         />
+        <Route path="*" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
